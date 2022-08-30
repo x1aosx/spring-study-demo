@@ -7,9 +7,9 @@ spring:
   #配置数据源
   datasource:
     druid:
-      username: cmp
-      password: dev2022
-      url: jdbc:mariadb://14.18.33.148:3306/capability_management_platform?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true
+      username: spring
+      password: spring
+      url: jdbc:mariadb://www.shawsx.com:3306/spring?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true
       driver-class-name: org.mariadb.jdbc.Driver
       initial-size: 5
       min-idle: 5
@@ -23,3 +23,20 @@ spring:
         url-pattern: /druid/*
         login-username: druid.gz
         login-password: druid.gz
+  #配置Redis
+  redis:
+    host: 14.18.33.148
+    database: 0
+    port: 6379
+    password: cmp2022
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: 3000
+        max-idle: 20
+        min-idle: 5
+      cluster:
+        refresh:
+          period: 20
+          adaptive: true
