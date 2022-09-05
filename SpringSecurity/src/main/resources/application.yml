@@ -40,3 +40,6 @@ spring:
         refresh:
           period: 20
           adaptive: true
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
