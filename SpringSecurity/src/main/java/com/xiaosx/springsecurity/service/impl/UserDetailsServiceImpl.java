@@ -1,4 +1,4 @@
-package com.xiaosx.springsecurity.service;
+package com.xiaosx.springsecurity.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.xiaosx.springsecurity.mapper.UserMapper;
