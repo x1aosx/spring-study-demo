@@ -1,4 +1,4 @@
-package com.xiaosx.springsecurity.utils;
+package com.xiaosx.security.utils;
 
 /**
  * @author 庞贤明
@@ -16,21 +16,21 @@ public enum ResultStatus {
     GONE(410, "无此资源"),
     SERVER_ERROR(500, "服务器错误");
 
-    private int resultCode;
+    private int status;
 
     private String message;
 
-    ResultStatus(int resultCode, String message) {
-        this.resultCode = resultCode;
+    ResultStatus(int status, String message) {
+        this.status = status;
         this.message = message;
     }
 
-    public int getResultCode() {
-        return resultCode;
+    public int getStatus() {
+        return status;
     }
 
-    public void setResultCode(int resultCode) {
-        this.resultCode = resultCode;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getMessage() {
@@ -44,7 +44,7 @@ public enum ResultStatus {
     @Override
     public String toString() {
         return "ResultStatus{" +
-                "resultCode=" + resultCode +
+                "status=" + status +
                 ", message='" + message + '\'' +
                 '}';
     }

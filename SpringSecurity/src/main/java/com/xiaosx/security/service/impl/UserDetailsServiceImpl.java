@@ -1,9 +1,9 @@
-package com.xiaosx.springsecurity.service.impl;
+package com.xiaosx.security.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.xiaosx.springsecurity.mapper.UserMapper;
-import com.xiaosx.springsecurity.pojo.LoginUser;
-import com.xiaosx.springsecurity.pojo.User;
+import com.xiaosx.security.mapper.UserMapper;
+import com.xiaosx.security.entity.LoginUser;
+import com.xiaosx.security.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -24,14 +24,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Resource
     private UserMapper userMapper;
 
+    private final static String USER_NOT_EXIST = "没有此用户";
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(User::getUsername, username);
         User user = userMapper.selectOne(queryWrapper);
         if (Objects.isNull(user)) {
-            throw new UsernameNotFoundException("没有此用户");
+            throw new UsernameNotFoundException(USER_NOT_EXIST);
         }
-        return new LoginUser(user);
+        return new LoginUser(user,null);
     }
 }

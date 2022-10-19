@@ -1,8 +1,8 @@
-package com.xiaosx.springsecurity;
+package com.xiaosx.security;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.xiaosx.springsecurity.mapper.UserMapper;
-import com.xiaosx.springsecurity.pojo.User;
+import com.xiaosx.security.mapper.UserMapper;
+import com.xiaosx.security.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
