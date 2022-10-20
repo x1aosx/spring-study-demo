@@ -4,6 +4,10 @@ import com.xiaosx.minio.util.MinioUtil;
 import com.xiaosx.security.utils.Result;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
@@ -48,7 +52,6 @@ public class FileController {
      * @param bucket:
      * @param objectName:
      **/
-    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
     @PostMapping(URL_UPLOAD_FILE)
     public Result fileUpload(@RequestParam MultipartFile uploadFile, @RequestParam String bucket,
                              @RequestParam(required = false) String objectName) throws Exception {
@@ -152,6 +155,5 @@ public class FileController {
 
         return Result.SUCCESS(minioUtil.listAllFile(), URL_LIST_ALL_FILES);
     }
-
 
 }

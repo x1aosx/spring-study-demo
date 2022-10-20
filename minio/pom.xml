@@ -4,9 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.xiaosx</groupId>
+<<<<<<< HEAD
         <artifactId>spring-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
+=======
+        <artifactId>SpringDemo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath /> <!-- lookup parent from repository -->
+>>>>>>> ac096d6e5614215406c1bf9366920cd3f4099560
     </parent>
     <artifactId>minio</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -15,6 +21,7 @@
     <properties>
         <java.version>17</java.version>
     </properties>
+<<<<<<< HEAD
     <dependencies>
         <dependency>
             <groupId>com.xiaosx</groupId>
@@ -27,6 +34,8 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
+=======
+>>>>>>> ac096d6e5614215406c1bf9366920cd3f4099560
     <build>
         <plugins>
             <plugin>
