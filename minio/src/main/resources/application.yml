@@ -1,0 +1,6 @@
+server:
+  port: 8180
+minio:
+  endpoint: https://minio.shawsx.com:8443
+  accessKey: spring
+  secretKey: spring@123456
