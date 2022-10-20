@@ -44,7 +44,7 @@ public class MyBatisPlusGenerator {
                 })
                 .strategyConfig(builder -> {
 
-                    builder.addInclude("user"); // 设置需要生成的表名
+                    builder.addInclude("menu","role_menu","role","user_role"); // 设置需要生成的表名
 //                            .addTablePrefix("tb_"); // 设置过滤表前缀
                     builder.entityBuilder().enableLombok().enableFileOverride();//开启 lombok 模型,并开启覆盖写入
                     builder.entityBuilder().enableTableFieldAnnotation();//开启生成实体时生成字段注解
