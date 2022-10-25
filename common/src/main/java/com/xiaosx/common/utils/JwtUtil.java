@@ -1,4 +1,4 @@
-package com.xiaosx.security.utils;
+package com.xiaosx.common.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;

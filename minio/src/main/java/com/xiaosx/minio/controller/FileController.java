@@ -1,7 +1,7 @@
 package com.xiaosx.minio.controller;
 
+import com.xiaosx.common.utils.Result;
 import com.xiaosx.minio.util.MinioUtil;
-import com.xiaosx.security.utils.Result;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;

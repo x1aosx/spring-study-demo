@@ -1,6 +1,5 @@
-package com.xiaosx.security.task;
+package com.xiaosx.common.task;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,7 +14,6 @@ import javax.annotation.Resource;
  * @createTime 2022年09月19日 17:21:00
  */
 @Component
-@Slf4j
 public class LettuceConnectionValidTask {
     @Resource
     private RedisConnectionFactory redisConnectionFactory;

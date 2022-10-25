@@ -4,9 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = "com.xiaosx")
-@SpringBootApplication
 
+@SpringBootApplication(scanBasePackages = "com.xiaosx")
 public class MinioApplication {
 
     public static void main(String[] args) {

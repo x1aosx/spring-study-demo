@@ -1,4 +1,4 @@
-package com.xiaosx.security.config;
+package com.xiaosx.common.config;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;

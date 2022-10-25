@@ -1,4 +1,4 @@
-package com.xiaosx.security.utils;
+package com.xiaosx.common.utils;
 
 /**
  * @author 庞贤明

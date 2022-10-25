@@ -1,10 +1,13 @@
 server:
   port: 8180
+spring:
+  profiles:
+    active: common
 minio:
-  endpoint: https://minio.shawsx.com:8443
+  endpoint: minio.shawsx.com
+  port: 8443
+  region: cn-1
+  ssl: true
   accessKey: spring
   secretKey: spring@123456
-<<<<<<< HEAD
 
-=======
->>>>>>> ac096d6e5614215406c1bf9366920cd3f4099560
