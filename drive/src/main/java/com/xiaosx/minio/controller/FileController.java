@@ -131,14 +131,30 @@ public class FileController {
     }
 
 
+    
+    /*
+     * @author xsx
+     * @description //TODO 
+     * @date 22:12 2022/12/30 
+     * @param sourceBucket
+     * @param sourceObject
+     * @param targetBucket
+     * @param targetObject
+     **/
     @GetMapping(URL_COPY)
     public Result copyObject(@RequestParam String sourceBucket, @RequestParam String sourceObject, @RequestParam String targetBucket, @RequestParam String targetObject) throws Exception {
         minioUtil.copyObject(sourceBucket, sourceObject, targetBucket, targetObject);
         return Result.SUCCESS(URL_COPY);
     }
-
+    
+    /*
+     * @author xsx
+     * @description 获取对象信息
+     * @date 11:16 2022/12/31 
+     * @param bucket
+     * @param objectName
+     **/
     @GetMapping(URL_INFO)
-
     public Result getObjectInfo(@RequestParam String bucket, @RequestParam String objectName) throws Exception {
 
         return Result.SUCCESS(minioUtil.getObjectInfo(bucket, objectName), URL_INFO);

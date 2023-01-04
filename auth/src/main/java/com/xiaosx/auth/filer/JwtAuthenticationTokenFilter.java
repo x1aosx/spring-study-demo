@@ -2,7 +2,7 @@ package com.xiaosx.auth.filer;
 
 
 import com.xiaosx.auth.entity.LoginUser;
-import com.xiaosx.common.utils.JwtUtil;
+import com.xiaosx.auth.utils.JwtUtil;
 import com.xiaosx.common.utils.RedisUtil;
 import com.xiaosx.common.utils.Result;
 import com.xiaosx.common.utils.WebUtils;

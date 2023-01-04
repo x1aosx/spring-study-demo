@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.xiaosx.auth.entity.LoginUser;
 import com.xiaosx.auth.entity.User;
 import com.xiaosx.auth.entity.UserForm;
-import com.xiaosx.common.utils.JwtUtil;
+import com.xiaosx.auth.utils.JwtUtil;
 import com.xiaosx.common.utils.RedisUtil;
 import com.xiaosx.common.utils.Result;
 import lombok.extern.slf4j.Slf4j;

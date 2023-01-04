@@ -1,13 +1,18 @@
 server:
-  port: 8180
+  port: 9200
 spring:
   profiles:
     active: common
+  application:
+    name: drive
 minio:
   endpoint: minio.shawsx.com
   port: 8443
   region: cn-1
-  ssl: true
   accessKey: spring
   secretKey: spring@123456
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/
 

@@ -1,8 +1,12 @@
 #配置端口和tomcat编码
 server:
-  port: 8080
-  tomcat:
-    uri-encoding: UTF-8
+  port: 9100
 spring:
   profiles:
-    active: minio,common,auth
+    active: common
+  application:
+    name: auth
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9000/eureka/
