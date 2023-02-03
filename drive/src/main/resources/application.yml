@@ -5,6 +5,13 @@ spring:
     active: common
   application:
     name: drive
+  data:
+    mongodb:
+      host: www.shawsx.com
+      username: test
+      password: test
+      port: 27017
+      database: test
 minio:
   endpoint: minio.shawsx.com
   port: 8443
