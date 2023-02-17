@@ -1,4 +1,4 @@
-package com.xiaosx.common.utils;
+package com.xiaosx.questionnaire.utils;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
@@ -8,18 +8,17 @@ import com.baomidou.mybatisplus.generator.config.querys.MySqlQuery;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 import com.baomidou.mybatisplus.generator.keywords.MySqlKeyWordsHandler;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.util.Collections;
 
 @Slf4j
 public class MyBatisPlusGenerator {
 
-    private final static String URL = "jdbc:mariadb://www.shawsx.com:3306/spring?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true";
+    private final static String URL = "jdbc:mariadb://www.shawsx.com:3306/questionnaire?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true";
 
-    private final static String USERNAME = "spring";
+    private final static String USERNAME = "question";
 
-    private final static String PASSWORD = "spring@2022";
+    private final static String PASSWORD = "question@123";
 
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir");
@@ -36,16 +35,16 @@ public class MyBatisPlusGenerator {
                 .globalConfig(builder -> {
                     builder.author("xiaosx") //设置作者
                             .commentDate("YYYY-MM-DD HH:mm:ss")//注释日期
-                            .outputDir(projectPath + "\\SpringSecurity\\src\\main\\java"); //指定输出目录
+                            .outputDir(projectPath + "\\questionnaire\\src\\main\\java"); //指定输出目录
 
                 })
                 .packageConfig(builder -> {
-                    builder.parent("com.xiaosx.security")// 设置父包名
-                            .pathInfo(Collections.singletonMap(OutputFile.xml, projectPath + "\\SpringSecurity\\src\\main\\resources\\mapper"));
+                    builder.parent("com.xiaosx.questionnaire")// 设置父包名
+                            .pathInfo(Collections.singletonMap(OutputFile.xml, projectPath + "\\questionnaire\\src\\main\\resources\\mapper"));
                 })
                 .strategyConfig(builder -> {
 
-                    builder.addInclude("menu","role_menu","role","user_role"); // 设置需要生成的表名
+                    builder.addInclude("answer","survey","question"); // 设置需要生成的表名
 //                            .addTablePrefix("tb_"); // 设置过滤表前缀
                     builder.entityBuilder().enableLombok().enableFileOverride();//开启 lombok 模型,并开启覆盖写入
                     builder.entityBuilder().enableTableFieldAnnotation();//开启生成实体时生成字段注解
